@@ -1,0 +1,10 @@
+prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${exec_prefix}/include
+
+Name: libcolor
+Description: Simple library for terminal colors
+Version: 1.0.0
+Libs: -L${libdir} -lcolor -Wl,-rpath,${libdir}
+Cflags: -I${includedir}
