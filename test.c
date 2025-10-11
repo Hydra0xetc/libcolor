@@ -15,8 +15,8 @@ int main(void) {
     print_success("Processed %d items.\n", item_count);
 
     // Attributes and colors
+    print_red(BG_WHITE "Red text on a white background." RESET "\n");
     print_yellow(BOLD "This is a bold yellow message.\n");
-    print_red(BG_WHITE "Red text on a white background.\n");
 
     return 0;
 }
