@@ -66,6 +66,7 @@ int main(void) {
     // Semantic functions
     print_success("Operation was successful.\n");
     print_error("An error occurred.\n");
+    print_warning("ffmpeg not found\n");
 
     // Formatted string
     int item_count = 10;

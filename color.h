@@ -30,6 +30,7 @@
 #define BG_WHITE   "\033[47m"
 
 // Text styles
+#define DIM       "\033[2m"
 #define BOLD      "\033[1m"
 #define UNDERLINE "\033[4m"
 #define BLINK     "\033[5m"
@@ -58,6 +59,13 @@ void print_debug(const char *str, ...);
  * @param ... Variable arguments for the format string
  */
 void print_error(const char *str, ...);
+
+/**
+ * @brief Prints an error message with red color and [WARNING] prefix to stderr
+ * @param str Format string (printf-style)
+ * @param ... Variable arguments for the format string
+ */
+void print_warning(const char *str, ...);
 
 /**
  * @brief Prints text in bold yellow color

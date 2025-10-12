@@ -82,6 +82,23 @@ void print_debug(const char *format, ...) {
 }
 
 /**
+ * @brief Prints a warning message with yellow color and [WARNING] prefix to stderr
+ * @param format Format string (like printf)
+ * @param ... Variable arguments matching the format string
+ *
+ * Example: print_warning("ffmpeg not foung");
+ * Output: [WARNING] ffmpeg not found
+ */
+void print_warning(const char *format, ...) {
+    fprintf(stderr, BOLD MAGENTA "[WARNING]" RESET);
+
+    va_list args;
+    va_start(args, format);
+    vfprintf(stderr, format, args);
+    va_end(args);
+}
+
+/**
  * @brief Prints text in bold yellow color
  * @param format Format string (like printf)
  * @param ... Variable arguments matching the format string
