@@ -8,13 +8,13 @@ int main(void) {
     print_green("This is a green message.\n");
 
     // Semantic functions
-    print_success(" Operation was successful.\n");
-    print_error(" An error occurred.\n");
-    print_warning(" ffmpeg not found\n");
+    print_success("Operation was successful.\n");
+    print_error("An error occurred.\n");
+    print_warning("ffmpeg not found\n");
 
     // Formatted string
     int item_count = 10;
-    print_success(" Processed %d items.\n", item_count);
+    print_success("Processed %d items.\n", item_count);
 
     // Attributes and colors
     print_red(BG_WHITE "Red text on a white background\n");
