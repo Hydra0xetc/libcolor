@@ -10,6 +10,12 @@ A simple C library for printing colored and styled text to the terminal.
 - **Background Colors**: `BG_RED`, `BG_GREEN`, etc.
 - **Printf-style Formatting**: Use format specifiers like `%d` and `%s`.
 
+## Prerequisites
+
+- GCC or C compiler
+- make
+- pkg-config
+
 ## Installation
 
 1.  **Compile the library:**
@@ -66,9 +72,30 @@ int main(void) {
     print_success("Processed %d items.\n", item_count);
 
     // Attributes and colors
-    print_yellow(BOLD "This is a bold yellow message.\n");
+    print_yellow("This is a bold yellow message.\n");
     print_red(BG_WHITE "Red text on a white background.\n");
 
+    return 0;
+}
+```
+
+## Using ANSI Macros Directly
+
+For more control, you can use the color macros directly with `printf`:
+
+```c
+#include <color.h>
+#include <stdio.h>
+
+int main(void) {
+    // Combine styles and colors
+    printf(BOLD RED "Bold red text" RESET "\n");
+    printf(UNDERLINE BLUE "Underlined blue text" RESET "\n");
+    printf(GREEN BG_BLACK "Green on black" RESET "\n");
+    
+    // Always use RESET to avoid color bleeding
+    printf(YELLOW "Warning" RESET " normal text\n");
+    
     return 0;
 }
 ```

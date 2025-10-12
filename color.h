@@ -1,3 +1,14 @@
+/**
+ * @file color.h
+ * @brief ANSI color codes and printing functions for terminal output
+ *
+ * This header provides macros for ANSI escape codes to colorize terminal text
+ * and functions for convenient colored output with formatting.
+ */
+
+#ifndef COLOR_H
+#define COLOR_H
+
 // Text colors
 #define BLACK   "\033[30m"
 #define RED     "\033[31m"
@@ -27,15 +38,53 @@
 // Reset
 #define RESET "\033[0m"
 
-#ifndef COLOR_H
-#define COLOR_H
-
+/**
+ * @brief Prints a success message with green color and [SUCCESS] prefix
+ * @param str Format string (printf-style)
+ * @param ... Variable arguments for the format string
+ */
 void print_success(const char *str, ...);
+
+/**
+ * @brief Prints a debug message with yellow color and [DEBUG] prefix to stderr
+ * @param str Format string (printf-style)
+ * @param ... Variable arguments for the format string
+ */
 void print_debug(const char *str, ...);
+
+/**
+ * @brief Prints an error message with red color and [ERROR] prefix to stderr
+ * @param str Format string (printf-style)
+ * @param ... Variable arguments for the format string
+ */
 void print_error(const char *str, ...);
+
+/**
+ * @brief Prints text in bold yellow color
+ * @param str Format string (printf-style)
+ * @param ... Variable arguments for the format string
+ */
 void print_yellow(const char *str, ...);
+
+/**
+ * @brief Prints text in bold red color
+ * @param str Format string (printf-style)
+ * @param ... Variable arguments for the format string
+ */
 void print_red(const char *str, ...);
+
+/**
+ * @brief Prints text in bold green color
+ * @param str Format string (printf-style)
+ * @param ... Variable arguments for the format string
+ */
 void print_green(const char *str, ...);
+
+/**
+ * @brief Prints text in bold blue color
+ * @param str Format string (printf-style)
+ * @param ... Variable arguments for the format string
+ */
 void print_blue(const char *str, ...);
 
 #endif // COLOR_H
