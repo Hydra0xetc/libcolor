@@ -69,7 +69,7 @@ static void print_color_format(FILE *stream, const char *color, const char *form
  * @param format Format string (like printf) - MUST be from trusted source
  * @param ... Variable arguments matching the format string
  *
- * SECURITY NOTE: The format parameter must come from a trusted source,
+ * NOTE: The format parameter must come from a trusted source,
  * not directly from user input, to prevent format string attacks.
  *
  * Example: print_success("File %s created\n", filename);
