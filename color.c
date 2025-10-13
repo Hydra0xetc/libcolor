@@ -241,6 +241,48 @@ void print_blue(const char *format, ...) {
 }
 
 /**
+ * @brief Prints text in bold cyan color
+ * @param format Format string (like printf) - MUST be from trusted source
+ * @param ... Variable arguments matching the format string
+ *
+ * NOTE: The format parameter must come from a trusted source,
+ * not directly from user input, to prevent format string attacks.
+ *
+ * Example: print_cyan("Warning opertion terminated\n");
+ * Output: (text in cyan) Warning opertion terminated
+ */
+void print_cyan(const char *format, ...) {
+    if (!format)
+        return;
+
+    va_list args;
+    va_start(args, format);
+    print_color_format(stdout, BOLD CYAN, format, args);
+    va_end(args);
+}
+
+/**
+ * @brief Prints text in bold magenta color
+ * @param format Format string (like printf) - MUST be from trusted source
+ * @param ... Variable arguments matching the format string
+ *
+ * NOTE: The format parameter must come from a trusted source,
+ * not directly from user input, to prevent format string attacks.
+ *
+ * Example: print_magenta("Warning opertion terminated\n");
+ * Output: (text in magenta) Warning opertion terminated
+ */
+void print_magenta(const char *format, ...) {
+    if (!format)
+        return;
+
+    va_list args;
+    va_start(args, format);
+    print_color_format(stdout, BOLD MAGENTA, format, args);
+    va_end(args);
+}
+
+/**
  * @brief Safely prints user-provided text with color (for untrusted input)
  * @param stream Output stream
  * @param color Color code to use

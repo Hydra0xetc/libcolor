@@ -89,6 +89,20 @@ void print_red(const char *str, ...);
 void print_green(const char *str, ...);
 
 /**
+ * @brief Prints text in bold cyan color
+ * @param str Format string (printf-style)
+ * @param ... Variable arguments for the format string
+ */
+void print_cyan(const char *str, ...);
+
+/**
+ * @brief Prints text in bold magenta color
+ * @param str Format string (printf-style)
+ * @param ... Variable arguments for the format string
+ */
+void print_magenta(const char *str, ...);
+
+/**
  * @brief Prints text in bold blue color
  * @param str Format string (printf-style)
  * @param ... Variable arguments for the format string

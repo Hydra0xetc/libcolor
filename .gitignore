@@ -1,3 +1,4 @@
 a.out
 *.so
 test
+compile_commands.json
