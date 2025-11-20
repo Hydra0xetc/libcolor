@@ -44,69 +44,69 @@
  * @param str Format string (printf-style)
  * @param ... Variable arguments for the format string
  */
-void print_success(const char *str, ...);
+void print_success(const char *str, ...) __attribute__((format(printf, 1, 2)));
 
 /**
  * @brief Prints a debug message with yellow color and [DEBUG] prefix to stderr
  * @param str Format string (printf-style)
  * @param ... Variable arguments for the format string
  */
-void print_debug(const char *str, ...);
+void print_debug(const char *str, ...) __attribute__((format(printf, 1, 2)));
 
 /**
  * @brief Prints an error message with red color and [ERROR] prefix to stderr
  * @param str Format string (printf-style)
  * @param ... Variable arguments for the format string
  */
-void print_error(const char *str, ...);
+void print_error(const char *str, ...) __attribute__((format(printf, 1, 2)));
 
 /**
  * @brief Prints an error message with red color and [WARNING] prefix to stderr
  * @param str Format string (printf-style)
  * @param ... Variable arguments for the format string
  */
-void print_warning(const char *str, ...);
+void print_warning(const char *str, ...) __attribute__((format(printf, 1, 2)));
 
 /**
  * @brief Prints text in bold yellow color
  * @param str Format string (printf-style)
  * @param ... Variable arguments for the format string
  */
-void print_yellow(const char *str, ...);
+void print_yellow(const char *str, ...) __attribute__((format(printf, 1, 2)));
 
 /**
  * @brief Prints text in bold red color
  * @param str Format string (printf-style)
  * @param ... Variable arguments for the format string
  */
-void print_red(const char *str, ...);
+void print_red(const char *str, ...) __attribute__((format(printf, 1, 2)));
 
 /**
  * @brief Prints text in bold green color
  * @param str Format string (printf-style)
  * @param ... Variable arguments for the format string
  */
-void print_green(const char *str, ...);
+void print_green(const char *str, ...) __attribute__((format(printf, 1, 2)));
 
 /**
  * @brief Prints text in bold cyan color
  * @param str Format string (printf-style)
  * @param ... Variable arguments for the format string
  */
-void print_cyan(const char *str, ...);
+void print_cyan(const char *str, ...) __attribute__((format(printf, 1, 2)));
 
 /**
  * @brief Prints text in bold magenta color
  * @param str Format string (printf-style)
  * @param ... Variable arguments for the format string
  */
-void print_magenta(const char *str, ...);
+void print_magenta(const char *str, ...) __attribute__((format(printf, 1, 2)));
 
 /**
  * @brief Prints text in bold blue color
  * @param str Format string (printf-style)
  * @param ... Variable arguments for the format string
  */
-void print_blue(const char *str, ...);
+void print_blue(const char *str, ...) __attribute__((format(printf, 1, 2)));
 
 #endif // COLOR_H

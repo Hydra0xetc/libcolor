@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -fPIC -Wall -Wextra -std=c11 \
          -O2 -D_FORTIFY_SOURCE=2 \
-         -fstack-protector-strong
+         -fstack-protector-strong -s
 
 LDFLAGS = -shared
 

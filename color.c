@@ -20,7 +20,10 @@
  * - Proper error handling
  * - Memory safety with bounds checking
  */
-static void print_color_format(FILE *stream, const char *color, const char *format, va_list args) {
+static void print_color_format(FILE *stream,
+                               const char *color,
+                               const char *format,
+                               va_list args) {
     /* Validate inputs */
     if (!stream || !color || !format) {
         return;
@@ -134,7 +137,8 @@ void print_debug(const char *format, ...) {
 }
 
 /**
- * @brief Prints a warning message with magenta color and [WARNING] prefix to stderr
+ * @brief Prints a warning message with magenta color and [WARNING] prefix to
+ * stderr
  * @param format Format string (like printf) - MUST be from trusted source
  * @param ... Variable arguments matching the format string
  *
